@@ -78,9 +78,9 @@ main {
 .cart-item {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
-    padding: 16px 0;
-    border-bottom: 1px solid #eee;
+    gap: 12px;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .cart-item:last-child {
@@ -121,17 +121,23 @@ main {
     margin-top: 24px;
     width: 100%;
     border-radius: 18px;
-    border: none;
-    background-color: var(--Green);
+    border: 2px solid var(--Red);
+    background-color: var(--Red);
     color: white;
     padding: 16px 20px;
     font-weight: 700;
     font-size: 1rem;
+    transition: all 0.2s ease;
 }
 
 .cart-confirm-btn:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+.cart-confirm-btn:hover {
+    background-color: hsl(14, 86%, 35%);
+    transform: translateY(-2px);
 }
 
 .cart-message {
